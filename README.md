@@ -19,7 +19,7 @@ Clone the Repository:
 
 bash
 Copy code
-git clone https://github.com/yourusername/ONLINE BANKING SYSTEM.git
+git clone https://github.com/Shivam8105/ONLINE-BANKING-SYSTEM.git
 cd online-banking-system
 Database Configuration:
 
