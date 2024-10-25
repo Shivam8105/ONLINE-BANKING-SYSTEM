@@ -1,42 +1,44 @@
-#Online Banking Systen
+Online Banking System
 Description
-This project is a simple online banking dashboard application built using Java Servlets, JSP (JavaServer Pages), and MySQL. The application provides a basic framework for user authentication and account management, allowing both customers and admin users to log in and access their respective dashboards.
+This project is an Online Banking System built using Java Servlets, JSP (JavaServer Pages), and MySQL. It provides a basic framework for user authentication and account management, enabling both customers and administrators to log in and access their respective dashboards. The system aims to simulate the core functionalities of a banking application, including account management, transaction history, and user roles.
 
 Features
-User Authentication: Users can log in using their credentials. The application supports both customer and admin roles.
-Dynamic Dashboard: Once logged in, users are redirected to a dashboard that displays their role and a welcome message.
-Basic Account Management: The application sets the groundwork for integrating user account management and transaction history retrieval.
-Session Management: User sessions are handled to maintain state during navigation.
+User Authentication: Secure login system for customers and admins, validating credentials against a MySQL database.
+Dynamic Dashboards: Role-specific dashboards that display relevant information based on user type (Customer or Admin).
+Account Management: Basic structure for viewing account details and balances.
+Transaction History: Placeholder for displaying user transaction records.
+Session Management: Maintains user sessions to ensure a smooth navigation experience.
 Technologies Used
-Java: The core programming language for the backend.
-Servlets: Used to handle HTTP requests and responses.
-JSP: JavaServer Pages for rendering dynamic web pages.
-MySQL: Relational database management system for storing user credentials and data.
-HTML/CSS: Basic frontend technologies for creating the user interface.
+Java: Core programming language for backend logic.
+Servlets: Handles HTTP requests and responses to implement business logic.
+JSP: Renders dynamic web content.
+MySQL: Relational database for user and account data storage.
+HTML/CSS: Basic frontend technologies for user interface design.
 Setup Instructions
 Clone the Repository:
 
 bash
 Copy code
-git clone https://github.com/Shivam8105/online-banking-dashboard.git
-cd online-banking-dashboard
+git clone https://github.com/your username/ONLINE BANKING SYSTEM.git
+cd online-banking-system
 Database Configuration:
 
-Set up a MySQL database named bank with the provided SQL schema.
+Set up a MySQL database named bank and run the provided SQL schema to create the necessary tables.
 Insert sample data for users.
 Java Environment:
 
 Ensure you have a Java Development Kit (JDK) installed.
-Set up a servlet container (like Apache Tomcat) for running the web application.
+Set up a servlet container (e.g., Apache Tomcat) to run the web application.
 Run the Application:
 
 Deploy the application to your servlet container.
-Access the application at http://localhost:8080/online-banking-dashboard/index.jsp.
+Access the application at http://localhost:8080/online-banking-system/index.jsp.
 Future Improvements
-Implement password hashing for enhanced security.
-Add functionality for viewing account details and transaction history.
-Implement user registration and profile management.
-Enhance the user interface with modern frameworks (e.g., Bootstrap).
-Expand support for admin functionalities, such as user management and reporting.
+Implement password hashing and encryption for enhanced security.
+Expand account management features, including deposit and withdrawal functionalities.
+Integrate user transaction history with real data retrieval.
+Add user registration and profile management capabilities.
+Enhance the user interface using frameworks like Bootstrap for responsiveness.
+Provide admin functionalities for user and transaction oversight.
 License
 This project is licensed under the MIT License - see the LICENSE file for details.
