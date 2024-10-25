@@ -1,4 +1,4 @@
-Online Banking System
+#Online Banking System <br>
 Description
 This project is an Online Banking System built using Java Servlets, JSP (JavaServer Pages), and MySQL. It provides a basic framework for user authentication and account management, enabling both customers and administrators to log in and access their respective dashboards. The system aims to simulate the core functionalities of a banking application, including account management, transaction history, and user roles.
 
