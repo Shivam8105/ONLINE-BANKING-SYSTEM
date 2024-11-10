@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+  <link rel="stylesheet" href="dashboard.css" />
+</head>
+
+<body>
+  <nav id="sidebar">
+    <ul id="logo-btn">
+      <li>
+        <span class="logo">Coin2Flow </span>
+      </li>
+    </ul>
+    <ul class="nav-list">
+      <li class="home">
+        <button class="drop-btn">
+          <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"
+            class="svg-btn">
+            <path
+              d="M240-200h120v-240h240v240h120v-360L480-740 240-560v360Zm-80 80v-480l320-240 320 240v480H520v-240h-80v240H160Zm320-350Z" />
+          </svg>
+          <span> Home</span>
+        </button>
+      </li>
+      <li>
+        <button class="drop-btn">
+          <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"
+            class="svg-btn">
+            <path
+              d="M480-480q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47ZM160-160v-112q0-34 17.5-62.5T224-378q62-31 126-46.5T480-440q66 0 130 15.5T736-378q29 15 46.5 43.5T800-272v112H160Zm80-80h480v-32q0-11-5.5-20T700-306q-54-27-109-40.5T480-360q-56 0-111 13.5T260-306q-9 5-14.5 14t-5.5 20v32Zm240-320q33 0 56.5-23.5T560-640q0-33-23.5-56.5T480-720q-33 0-56.5 23.5T400-640q0 33 23.5 56.5T480-560Zm0-80Zm0 400Z" />
+          </svg>
+          <span>Profile</span>
+          <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368">
+            <path d="M480-360 280-560h400L480-360Z" />
+          </svg>
+        </button>
+        <ul class="dropdown-profile" onclick="hide()">
+          <li><a href="#">View Profile</a></li>
+          <li><a href="#">Edit Profile</a></li>
+          <li><a href="#">Setting</a></li>
+        </ul>
+      </li>
+      <li>
+        <button class="drop-btn">
+          <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"
+            class="svg-btn">
+            <path
+              d="M200-280v-280h80v280h-80Zm240 0v-280h80v280h-80ZM80-120v-80h800v80H80Zm600-160v-280h80v280h-80ZM80-640v-80l400-200 400 200v80H80Zm178-80h444-444Zm0 0h444L480-830 258-720Z" />
+          </svg>
+          <span>Accounts</span>
+          <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368">
+            <path d="M480-360 280-560h400L480-360Z" />
+          </svg>
+        </button>
+        <ul class="dropdown-Accounts" onclick="hide()">
+          <li><a href="#">View Balance</a></li>
+          <li><a href="#">Transaction</a></li>
+          <li><a href="#">Transfer</a></li>
+        </ul>
+      </li>
+      <li>
+        <button class="drop-btn">
+          <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"
+            class="svg-btn">
+            <path
+              d="M440-120v-80h320v-284q0-117-81.5-198.5T480-764q-117 0-198.5 81.5T200-484v244h-40q-33 0-56.5-23.5T80-320v-80q0-21 10.5-39.5T120-469l3-53q8-68 39.5-126t79-101q47.5-43 109-67T480-840q68 0 129 24t109 66.5Q766-707 797-649t40 126l3 52q19 9 29.5 27t10.5 38v92q0 20-10.5 38T840-249v49q0 33-23.5 56.5T760-120H440Zm-80-280q-17 0-28.5-11.5T320-440q0-17 11.5-28.5T360-480q17 0 28.5 11.5T400-440q0 17-11.5 28.5T360-400Zm240 0q-17 0-28.5-11.5T560-440q0-17 11.5-28.5T600-480q17 0 28.5 11.5T640-440q0 17-11.5 28.5T600-400Zm-359-62q-7-106 64-182t177-76q89 0 156.5 56.5T720-519q-91-1-167.5-49T435-698q-16 80-67.5 142.5T241-462Z" />
+          </svg>
+          <span>Payment & Services</span>
+          <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368">
+            <path d="M480-360 280-560h400L480-360Z" />
+          </svg>
+        </button>
+        <ul class="dropdown-Services" onclick="hide()">
+          <li><a href="#">Loans</a></li>
+          <li><a href="#">Cutomer Support</a></li>
+        </ul>
+      </li>
+
+      <li>
+        <button class="drop-btn">
+          <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"
+            class="svg-btn">
+            <path
+              d="m370-80-16-128q-13-5-24.5-12T307-235l-119 50L78-375l103-78q-1-7-1-13.5v-27q0-6.5 1-13.5L78-585l110-190 119 50q11-8 23-15t24-12l16-128h220l16 128q13 5 24.5 12t22.5 15l119-50 110 190-103 78q1 7 1 13.5v27q0 6.5-2 13.5l103 78-110 190-118-50q-11 8-23 15t-24 12L590-80H370Zm70-80h79l14-106q31-8 57.5-23.5T639-327l99 41 39-68-86-65q5-14 7-29.5t2-31.5q0-16-2-31.5t-7-29.5l86-65-39-68-99 42q-22-23-48.5-38.5T533-694l-13-106h-79l-14 106q-31 8-57.5 23.5T321-633l-99-41-39 68 86 64q-5 15-7 30t-2 32q0 16 2 31t7 30l-86 65 39 68 99-42q22 23 48.5 38.5T427-266l13 106Zm42-180q58 0 99-41t41-99q0-58-41-99t-99-41q-59 0-99.5 41T342-480q0 58 40.5 99t99.5 41Zm-2-140Z" />
+          </svg>
+          <span>Security & Setting</span>
+          <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368">
+            <path d="M480-360 280-560h400L480-360Z" />
+          </svg>
+        </button>
+        <ul class="dropdown-Setting" onclick="hide()">
+          <li><a href="#">Terms & Condition</a></li>
+          <li>
+            <a href="#">
+              <button id="Log-out">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                  fill="#5f6368">
+                  <path
+                    d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h280v80H200v560h280v80H200Zm440-160-55-58 102-102H360v-80h327L585-622l55-58 200 200-200 200Z" />
+                </svg>
+                <span>Log Out</span>
+              </button>
+            </a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+  <button id="toggle-btn" class="toggle-btn">
+    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="white"
+      style="background: none">
+      <path d="M560-240 320-480l240-240 56 56-184 184 184 184-56 56Z" />
+    </svg>
+  </button>
+
+  <main class="container">
+    <div class="main">
+      <div class="head">
+        <header>
+          <a href="dashboard.html">
+            <h1 style="
+                color: #e6e6ef;">
+              Coin<span style="
+                    color: green;
+                    font-size: 3rem;
+                    font-family: system-ui, -apple-system, BlinkMacSystemFont,
+                      'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans',
+                      'Helvetica Neue', sans-serif;
+                  ">2</span>Flow
+            </h1>
+
+            <p>The One Step Solution</p>
+          </a>
+          <div class="button-container">
+            <a href="Login.html" target="_blank">
+              <button id="Login" type="button" class="btn btn-dark">
+                Login
+              </button>
+            </a>
+            <a href="signup.html" target="_blank">
+              <button id="Sign-up" type="button" class="btn btn-dark">
+                Sign Up
+              </button>
+            </a>
+          </div>
+        </header>
+      </div>
+      <div class="title">
+        <p>
+          We are glad to serve you with the best.<span> Please ! Sign-up For Free</span>
+        </p>
+        <img src="/ONLINE-BANKING-SYSTEM/assets/PageImg.png" alt="atm-symbol">
+        <button type="submit" id="Front-btn">About Us</button>
+      </div>
+    </div>
+    <div class="c_container">
+      <div class="card__container">
+        <article class="card__article">
+          <img src="/ONLINE-BANKING-SYSTEM/assets/Homeloan.jpg" alt="EducationLoan" class="card__img">
+
+          <div class="card__data">
+            <span class="card__description">Get Your Home Loan with some easy step. Read the Guidellines
+              Carefully</span>
+            <h2 class="card__title">Home Loan</h2>
+            <a href="#" class="card__button">Read More</a>
+          </div>
+        </article>
+
+        <article class="card__article">
+          <img src="/ONLINE-BANKING-SYSTEM/assets/Homeloan.jpg" alt="EducationLoan" class="card__img">
+
+          <div class="card__data">
+            <span class="card__description">Get your personal loan of 100k with 0% interest rate . know more...</span>
+            <h2 class="card__title">Personal Loan</h2>
+            <a href="#" class="card__button">Read More</a>
+          </div>
+        </article>
+
+        <article class="card__article">
+          <img src="/ONLINE-BANKING-SYSTEM/assets/Education.jpg" alt="EducationLoan" class="card__img">
+
+          <div class="card__data">
+            <span class="card__description">The Edycation Loan make it easy for you.</span>
+            <h2 class="card__title">Education Loan</h2>
+            <a href="#" class="card__button">Read More</a>
+          </div>
+        </article>
+      </div>
+    </div>
+
+  </main>
+
+  <script src="app.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
