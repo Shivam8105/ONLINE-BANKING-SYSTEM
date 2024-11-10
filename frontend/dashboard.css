@@ -1,0 +1,367 @@
+/* Modern CSS Reset and Variables */
+:root {
+  --primary-color: #5e63ff;
+  --primary-hover: #4a4eff;
+  --success-color: #22c55e;
+  --background: #f8fafc;
+  --sidebar-bg: #11121a;
+  --text-primary: #1a1a1a;
+  --text-secondary: #64748b;
+  --text-light: #e6e6ef;
+  --border-color: #e2e8f0;
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  --transition: all 0.3s ease;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background: var(--background);
+  background-color: #11121ce6;
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+  line-height: 1.5;
+  color: var(--text-primary);
+  display: grid;
+  grid-template-columns: auto 1fr;
+}
+
+/* Sidebar Styles */
+#sidebar {
+  position: relative;
+  width: 280px;
+  height: 100vh;
+  background-color: var(--sidebar-bg);
+  padding: 1.5rem 1rem;
+  transition: var(--transition);
+  box-shadow: var(--shadow-md);
+}
+
+.logo {
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: var(--text-light);
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.nav-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.drop-btn {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  background: transparent;
+  color: var(--text-light);
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  cursor: pointer;
+  transition: var(--transition);
+  font-size: 0.875rem;
+}
+
+.drop-btn:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.drop-btn svg {
+  width: 1.25rem;
+  height: 1.25rem;
+  opacity: 0.8;
+}
+
+/* Dropdown Menus */
+.dropdown-profile,
+.dropdown-Accounts,
+.dropdown-Services,
+.dropdown-Setting {
+  margin-left: 2.5rem;
+  margin-top: 0.5rem;
+  display: none;
+  animation: slideDown 0.2s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-0.5rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.dropdown-profile a,
+.dropdown-Accounts a,
+.dropdown-Services a,
+.dropdown-Setting a {
+  display: block;
+  padding: 0.5rem 1rem;
+  color: var(--text-light);
+  text-decoration: none;
+  font-size: 0.875rem;
+  border-radius: 0.375rem;
+  transition: var(--transition);
+}
+
+.dropdown-profile a:hover,
+.dropdown-Accounts a:hover,
+.dropdown-Services a:hover,
+.dropdown-Setting a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Main Content Area */
+.main {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.head {
+  margin-bottom: 3rem;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+header a {
+  text-decoration: none;
+  color: var(--text-primary);
+}
+
+header h1 {
+  font-size: 2rem;
+  font-weight: 800;
+}
+
+header p {
+  font-size: 0.875rem;
+  color: var(--success-color);
+  background-color: rgba(34, 197, 94, 0.1);
+  padding: 0.25rem 0.75rem;
+  border-radius: 1rem;
+  margin-top: 0.5rem;
+}
+
+/* Buttons */
+.button-container {
+  display: flex;
+  gap: 1rem;
+}
+
+.btn {
+  padding: 0.5rem 1.25rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.btn-dark {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.btn-dark:hover {
+  background-color: var(--primary-hover);
+  transform: translateY(-1px);
+}
+
+/* Hero Section */
+.title {
+  max-width: 600px;
+  margin-top: 4rem;
+}
+
+.title h5 {
+  color: var(--success-color);
+  font-size: 0.875rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.title h4 {
+  font-size: 1.25rem;
+  color: var(--text-secondary);
+  margin-bottom: 1rem;
+}
+
+.title h1 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: var(--success-color);
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+
+.title p {
+  font-size: 1.125rem;
+  color: var(--text-secondary);
+  margin-bottom: 2rem;
+}
+
+#Front-btn {
+  padding: 0.75rem 1.5rem;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+#Front-btn:hover {
+  background-color: var(--success-color);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(34, 197, 94, 0.2);
+}
+
+/* Toggle Button */
+.toggle-btn {
+  position: fixed;
+  top: 1rem;
+  left: 260px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 100;
+  transition: var(--transition);
+  padding: 0.5rem;
+  border-radius: 50%;
+  background-color: var(--primary-color);
+}
+
+.toggle-btn:hover {
+  background-color: var(--primary-hover);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  body {
+    grid-template-columns: 1fr;
+  }
+
+  #sidebar {
+    position: fixed;
+    left: -280px;
+  }
+
+  #sidebar.show {
+    left: 0;
+  }
+
+  .main {
+    padding: 1rem;
+  }
+
+  .title h1 {
+    font-size: 2.5rem;
+  }
+}
+
+/* Modified Sidebar Styles */
+#sidebar {
+  position: fixed;
+  width: 280px;
+  height: 100vh;
+  background-color: var(--sidebar-bg);
+  padding: 1.5rem 1rem;
+  transition: var(--transition);
+  box-shadow: var(--shadow-md);
+  z-index: 1000;
+  transform: translateX(0);
+}
+
+#sidebar.hidden {
+  transform: translateX(-280px);
+}
+
+#sidebar.closed {
+  transform: translateX(-280px);
+}
+
+/* Modified Toggle Button */
+.toggle-btn {
+  position: fixed;
+  top: 1rem;
+  left: 260px;
+  background: var(--primary-color);
+  border: none;
+  cursor: pointer;
+  z-index: 1001;
+  transition: var(--transition);
+  padding: 0.5rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+}
+
+.toggle-btn:hover {
+  background-color: var(--primary-hover);
+}
+
+.toggle-btn svg {
+  transition: transform 0.3s ease;
+}
+
+#sidebar.hidden ~ .toggle-btn svg,
+#sidebar.closed ~ .toggle-btn svg {
+  transform: rotate(180deg);
+}
+
+/* Modified Dropdown Styles */
+.dropdown-profile,
+.dropdown-Accounts,
+.dropdown-Services,
+.dropdown-Setting {
+  display: none;
+  margin-left: 2.5rem;
+  margin-top: 0.5rem;
+}
+
+.dropdown-profile.open,
+.dropdown-Accounts.open,
+.dropdown-Services.open,
+.dropdown-Setting.open {
+  display: block;
+  animation: slideDown 0.3s ease-out;
+}
+
+/* Adjust main content when sidebar is hidden */
+.main {
+  margin-left: 280px;
+  transition: var(--transition);
+  padding: 2rem;
+  max-width: 1200px;
+}
+
+body:has(#sidebar.hidden) .main,
+body:has(#sidebar.closed) .main {
+  margin-left: 0;
+}
+
+/* Rest of your CSS remains the same */
