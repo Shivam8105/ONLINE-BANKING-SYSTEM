@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign up</title>
+    <link rel="stylesheet" href="signup.css" />
+  </head>
+  <body>
+    <div class="signup">
+      <h1>Please Register Yourself</h1>
+      <div class="container">
+        <div class="main">
+          <div class="content">
+            <h2>Sign Up</h2>
+            <form action="Login.html">
+              <input type="text" placeholder="First Name" required autofocus />
+              <input type="text" placeholder="Last Name" />
+              <input type="text" placeholder="Date of Birth" />
+              <input type="text" placeholder="Email" />
+              <label for="phone">
+                <input
+                  type="tel"
+                  class="phone"
+                  name="phone"
+                  placeholder="Mob No :"
+                  pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                  required
+                />
+              </label>
+              <label for="male">
+                <input
+                  type="radio"
+                  id="male-gender"
+                  name="gender"
+                  value="male"
+                  required
+                />Male
+              </label>
+
+              <label for="female">
+                <input
+                  type="radio"
+                  name="gender"
+                  id="female-gender"
+                  value="female"
+                  required
+                />
+                Female
+              </label>
+
+              <label for="other">
+                <input
+                  type="radio"
+                  name="gender"
+                  id="other-gender"
+                  value="other"
+                  required
+                />
+                Other
+              </label>
+
+              <button class="btn" type="submit">Sign In</button>
+            </form>
+          </div>
+          <div class="form-img">
+            <img src="assets/bg.png" alt="login image" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
