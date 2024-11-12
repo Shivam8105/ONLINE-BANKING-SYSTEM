@@ -1,0 +1,28 @@
+# Node modules
+node_modules/
+
+# Environment variables
+.env
+
+# Logs
+*.log
+
+# Build artifacts
+dist/
+build/
+
+# IDE and Editor files
+.vscode/
+.idea/
+
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# Database files
+*.sqlite
+*.db
+
+# Test coverage and linting reports
+coverage/
+*.coverage
