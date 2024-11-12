@@ -194,3 +194,33 @@ input[type="radio"] {
     border-top-right-radius: 8px;
   }
 }
+
+/* Alert message of unmatched password */
+
+.alert {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  margin: 20px 0;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #721c24; /* Dark red text color */
+  background-color: #f8d7da; /* Light red background */
+  border: 1px solid #f5c6cb; /* Border matching background color */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+}
+
+.alert strong {
+  margin-left: 10px;
+}
+
+.alert.alert-danger {
+  background-color: #f8d7da;
+  color: #721c24;
+  border-color: #f5c6cb;
+}
+
+.mt-4 {
+  margin-top: 1.5rem;
+}

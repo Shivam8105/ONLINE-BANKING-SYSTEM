@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coin2Flow</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="shortcut icon" href="/assets/dollar.png" type="image/x-icon">nk
+</head>
+<body>
+    <nav id="sidebar">
+        <button class="close-sidebar" id="close-sidebar">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="white">
+                <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+            </svg>
+        </button>
+        <div class="logo">
+            <p>Coin<span>2</span>Flow</p>
+        </div>
+        <ul class="nav-list">
+            <li>
+                <button class="drop-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                        <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
+                    </svg>
+                    <span>Home</span>
+                </button>
+            </li>
+            <li>
+                <button class="drop-btn" data-dropdown="profile">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                        <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                    </svg>
+                    <span>Profile</span>
+                    <svg class="dropdown-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                        <path d="M7 10l5 5 5-5z"/>
+                    </svg>
+                </button>
+                <ul class="dropdown-menu dropdown-profile">
+                    <li><a href="#">View Profile</a></li>
+                    <li><a href="#">Edit Profile</a></li>
+                    <li><a href="#">Settings</a></li>
+                </ul>
+            </li>
+            <li>
+                <button class="drop-btn" data-dropdown="accounts">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                        <path d="M4 10h16v7H4z M4 5h16v3H4z M4 18h16v1H4z"/>
+                    </svg>
+                    <span>Accounts</span>
+                    <svg class="dropdown-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                        <path d="M7 10l5 5 5-5z"/>
+                    </svg>
+                </button>
+                <ul class="dropdown-menu dropdown-accounts">
+                    <li><a href="#">View Balance</a></li>
+                    <li><a href="#">Transactions</a></li>
+                    <li><a href="#">Transfer</a></li>
+                </ul>
+            </li>
+            <li>
+                <button class="drop-btn" data-dropdown="services">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                        <path d="M20 4H4c-1.11 0-1.99.89-1.99 2L2 18c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V6c0-1.11-.89-2-2-2zm0 14H4v-6h16v6zm0-10H4V6h16v2z"/>
+                    </svg>
+                    <span>Payment & Services</span>
+                    <svg class="dropdown-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                        <path d="M7 10l5 5 5-5z"/>
+                    </svg>
+                </button>
+                <ul class="dropdown-menu dropdown-services">
+                    <li><a href="#">Loans</a></li>
+                    <li><a href="#">Customer Support</a></li>
+                </ul>
+            </li>
+            <li>
+                <button class="drop-btn" data-dropdown="settings">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                        <path d="M19.14 12.94c.04-.3.06-.61.06-.94 0-.32-.02-.64-.07-.94l2.03-1.58c.18-.14.23-.41.12-.61l-1.92-3.32c-.12-.22-.37-.29-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54c-.04-.24-.24-.41-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96c-.22-.08-.47 0-.59.22L2.74 8.87c-.12.21-.08.47.12.61l2.03 1.58c-.05.3-.07.62-.07.94s.02.64.07.94l-2.03 1.58c-.18.14-.23.41-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61l-2.03-1.58zM12 15.6c-1.98 0-3.6-1.62-3.6-3.6s1.62-3.6 3.6-3.6 3.6 1.62 3.6 3.6-1.62 3.6-3.6 3.6z"/>
+                    </svg>
+                    <span>Security & Settings</span>
+                    <svg class="dropdown-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                        <path d="M7 10l5 5 5-5z"/>
+                    </svg>
+                </button>
+                <ul class="dropdown-menu dropdown-settings">
+                    <li><a href="#">Terms & Conditions</a></li>
+                    <li><a href="#" class="logout-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                            <path d="M17 7l-1.41 1.41L18.17 11H8v2h10.17l-2.58 2.58L17 17l5-5zM4 5h8V3H4c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h8v-2H4V5z"/>
+                        </svg>
+                        <span>Log Out</span>
+                    </a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <button class="mobile-menu-btn" id="mobile-menu-btn">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="white">
+            <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+        </svg>
+    </button>
+    <div class="sidebar-overlay" id="sidebar-overlay"></div>
+    <button class="toggle-btn" id="toggle-btn">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="white">
+            <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
+        </svg>
+    </button>
+    <main class="main-content">
+        <div class="container">
+            <header class="main-header">
+                <div class="brand">
+                    <h1>Coin<span class="accent">2</span>Flow</h1>
+                    <p class="tagline">The One Step Solution</p>
+                </div>
+                <div class="auth-buttons">
+                    <a href="login.html" class="btn btn-primary">Login</a>
+                    <a href="/signup" class="btn btn-outline">Sign Up</a>
+                </div>
+            </header>
+            <section class="hero">
+                <div class="hero-content">
+                    <p class="hero-text">We are glad to serve you with the best. <span>Please! Sign-up For Free</span></p>
+                    <img src="/assets/PageImg.png" alt="Banking Services" class="hero-image">
+                    <button class="btn btn-primary btn-large">About Us</button>
+                </div>
+            </section>
+            <section class="services">
+                <div class="card-grid">
+                    <article class="service-card">
+                        <img src="/assets/Education.jpg" alt="Home Loan" class="card-image">
+                        <div class="card-content">
+                            <span class="card-tag">Home Loan</span>
+                            <h2 class="card-title">Get Your Dream Home</h2>
+                            <p class="card-description">Get Your Home Loan with some easy steps. Read the Guidelines Carefully</p>
+                            <a href="#" class="card-link">Read More</a>
+                        </div>
+                    </article>
+                    <article class="service-card">
+                        <img src="/assets/Homeloan.jpg" alt="Personal Loan" class="card-image">
+                        <div class="card-content">
+                            <span class="card-tag">Personal Loan</span>
+                            <h2 class="card-title">On-the-Spot Personal Loans</h2>
+                            <p class="card-description">Get your personal loan of 100k with 0% interest rate and within no time</p>
+                            <a href="#" class="card-link">Read More</a>
+                        </div>
+                    </article>
+                    <article class="service-card">
+                        <img src="/assets/Homeloan.jpg" alt="Education Loan" class="card-image">
+                        <div class="card-content">
+                            <span class="card-tag">Education Loan</span>
+                            <h2 class="card-title">Fund Your Education</h2>
+                            <p class="card-description">The Education Loan makes it easy for you and achieve your life goals</p>
+                            <a href="#" class="card-link">Read More</a>
+                        </div>
+                    </article>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

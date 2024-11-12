@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign up</title>
+    <link rel="stylesheet" href="/signup.css" />
+  </head>
+  <body>
+    <div class="signup">
+      <h1>Please Register Yourself</h1>
+      <div class="container">
+        <div class="main">
+          <div class="content">
+            <h2>Sign Up</h2>
+            <form action="/auth/signup" method="post">
+              <input type="text" name="firstName" placeholder="First Name" required autofocus />
+              <input type="text" name="lastName" placeholder="Last Name" required />
+              <input type="date" name="dob" placeholder="Date of Birth" required />
+              <input type="email" name="email" placeholder="Email" required />
+              <label for="phone">
+                <input
+                  type="tel"
+                  class="phone"
+                  name="phone"
+                  placeholder="Mob No :"
+                  pattern="^(\+91|91)?[6-9][0-9]{9}$"
+                  required
+                />
+              </label>
+
+              <label for="male">
+                <input
+                  type="radio"
+                  id="male-gender"
+                  name="gender"
+                  value="male"
+                  required
+                /> Male
+              </label>
+
+              <label for="female">
+                <input
+                  type="radio"
+                  name="gender"
+                  id="female-gender"
+                  value="female"
+                  required
+                /> Female
+              </label>
+
+              <label for="other">
+                <input
+                  type="radio"
+                  name="gender"
+                  id="other-gender"
+                  value="other"
+                  required
+                /> Other
+              </label>
+
+              <label for="password">Password</label>
+              <input 
+                type="password"
+                id="password"
+                name="password"
+                placeholder="Password"
+                required
+              />
+
+              <label for="passwordConfirm">Confirm Password</label>
+              <input 
+                type="password"
+                id="passwordConfirm"
+                name="passwordConfirm"
+                placeholder="Confirm Password"
+                required
+              />
+
+              <button class="btn" type="submit">Register Here</button>
+            </form>
+
+          {{#if message}}
+              <div class="alert alert-danger mt-4">
+                <strong>{{message}}</strong>
+              </div>
+            {{/if}}
+
+          </div>
+          <div class="form-img">
+            <img src="/assets/bg.png" alt="login image" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
