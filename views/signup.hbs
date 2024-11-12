@@ -14,10 +14,18 @@
           <div class="content">
             <h2>Sign Up</h2>
             <form action="/auth/signup" method="post">
-              <input type="text" name="firstName" placeholder="First Name" required autofocus />
-              <input type="text" name="lastName" placeholder="Last Name" required />
-              <input type="date" name="dob" placeholder="Date of Birth" required />
-              <input type="email" name="email" placeholder="Email" required />
+              <label for="firstname">
+                <input type="text" name="firstname" placeholder="First Name" required autofocus />
+              </label>
+              <label for="lastname">
+                <input type="text" name="lastname" placeholder="Last Name" required />
+              </label>
+              <label for="dob">
+                <input type="date" name="dob" placeholder="Date of Birth" required />
+              </label>
+             <label for="Email">
+               <input type="email" name="Email" placeholder="Email" required />
+             </label>
               <label for="phone">
                 <input
                   type="tel"
