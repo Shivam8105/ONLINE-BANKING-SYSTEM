@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link rel="stylesheet" href="/login.css">
+</head>
+<body>
+  <div class="login">
+    <h2>Login</h2>
+    <form action="/auth/login" method="post">
+      <input type="email" name="Email" placeholder="Email" required />
+      <input type="password" name="password" placeholder="Password" required />
+      <button type="submit">Log In</button>
+    </form>
+
+    {{#if message}}
+      <div class="alert alert-danger">
+        <strong>{{message}}</strong>
+      </div>
+    {{/if}}
+  </div>
+</body>
+</html>
