@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bank Account Application</title>
+  <link rel="stylesheet" href="/bankForm.css">
+</head>
+
+<body>
+  <div class="form-container">
+    <form class="bank-form" action="/auth/openaccount" method="post" enctype="multipart/form-data">
+      <h2>Open a New Bank Account</h2>
+      <p>Please fill out the form below to create your bank account.</p>
+
+      <div class="input-group">
+        <input type="text" name="fullName" id="fullName" required>
+        <label for="fullName">Full Name</label>
+      </div>
+
+      <div class="input-group">
+        <input type="email" name="email" id="email" required>
+        <label for="email">Email Address</label>
+      </div>
+
+      <div class="input-group">
+        <input type="tel" name="phone" id="phone" required>
+        <label for="phone">Phone Number</label>
+      </div>
+
+      <div class="input-group">
+        <textarea name="address" id="address" rows="3" required></textarea>
+        <label for="address">Residential Address</label>
+      </div>
+
+      <div class="input-group">
+        <select name="accountType" id="account-type" required>
+          <option value="" disabled selected>Select Account Type</option>
+          <option value="savings">Savings Account</option>
+          <option value="current">Current Account</option>
+          <option value="fixed-deposit">Fixed Deposit Account</option>
+        </select>
+        <label for="account-type" class="select-label">Account Type</label>
+      </div>
+
+      <div class="input-group">
+        <input type="number" name="initialDeposit" id="initial-deposit" step="0.01" required>
+        <label for="initial-deposit">Initial Deposit (in $)</label>
+      </div>
+
+      <div class="input-group">
+        <input type="date" name="dateOfBirth" id="dob" required>
+        <label for="dob">Date of Birth</label>
+      </div>
+
+      <div class="input-group">
+        <select name="gender" id="gender" required>
+          <option value="" disabled selected>Select Gender</option>
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+          <option value="other">Other</option>
+        </select>
+        <label for="gender" class="select-label">Gender</label>
+      </div>
+
+      <div class="input-group">
+        <label for="profilePicture">Profile Picture (Optional)</label>
+        <input type="file" name="profilePicture" id="profilePicture" accept="image/*">
+      </div>
+
+      <div class="input-group">
+        <input type="password" name="password" id="password" required>
+        <label for="password">Password</label>
+      </div>
+
+      <div class="input-group">
+        <input type="text" name="securityQuestion" id="securityQuestion"
+          placeholder="Enter a security question (Optional)">
+        <label for="securityQuestion">Security Question</label>
+      </div>
+
+      <div class="input-group">
+        <input type="text" name="securityAnswer" id="securityAnswer"
+          placeholder="Enter the answer to your security question (Optional)">
+        <label for="securityAnswer">Security Answer</label>
+      </div>
+
+      <div class="input-group">
+        <label for="twoFA">Enable Two-Factor Authentication</label>
+        <input type="checkbox" name="twoFA" id="twoFA">
+      </div>
+
+      <input type="hidden" name="accountStatus" value="active"> <!-- Default account status -->
+
+      <button type="submit">Submit Application</button>
+    </form>
+  </div>
+
+  <script>
+    document.querySelector('.bank-form').addEventListener('submit', async function (e) {
+      e.preventDefault(); // Prevent default form submission
+
+      // Collect form data
+      const formData = new FormData();
+      formData.append('fullName', document.getElementById('fullName').value);
+      formData.append('email', document.getElementById('email').value);
+      formData.append('phone', document.getElementById('phone').value);
+      formData.append('address', document.getElementById('address').value);
+      formData.append('accountType', document.getElementById('account-type').value);
+      formData.append('initialDeposit', document.getElementById('initial-deposit').value);
+      formData.append('dateOfBirth', document.getElementById('dob').value);
+      formData.append('gender', document.getElementById('gender').value);
+      formData.append('profilePicture', document.getElementById('profilePicture').files[0]);
+      formData.append('password', document.getElementById('password').value);
+      formData.append('securityQuestion', document.getElementById('securityQuestion').value);
+      formData.append('securityAnswer', document.getElementById('securityAnswer').value);
+      formData.append('twoFA', document.getElementById('twoFA').checked ? 'true' : 'false');
+      formData.append('accountStatus', 'active'); // Default account status
+
+      // Log the formData to check if it's correctly filled
+      for (let [key, value] of formData.entries()) {
+        console.log(`${key}: ${value}`);
+      }
+
+      try {
+        const response = await fetch('/auth/openaccount', {
+          method: 'POST',
+          headers: {
+            Authorization: `Bearer ${localStorage.getItem("authToken")}`, // Include JWT token for authentication
+          },
+          body: formData // Send the formData with the image
+        });
+
+        // Check if the response is HTML (like a login page)
+        const contentType = response.headers.get('Content-Type');
+        if (contentType && contentType.includes('text/html')) {
+          const responseText = await response.text();
+          console.error('Error: HTML response received, not JSON', responseText);
+          alert('Session expired or unauthorized. Please log in again.');
+          window.location.href = '/login'; // Redirect to login page
+          return;
+        }
+
+        // Handle the JSON response
+        const result = await response.json();
+
+        if (!response.ok) {
+          console.error('Error:', result);
+          alert(result.message || 'Something went wrong. Please try again.');
+          return;
+        }
+
+        alert(result.message);
+        window.location.href = '/account-success'; // Redirect to success page after account creation
+
+      } catch (error) {
+        console.error('Error:', error);
+        alert('Something went wrong. Please try again.');
+      }
+    });
+
+  </script>
+</body>
+
+</html>
